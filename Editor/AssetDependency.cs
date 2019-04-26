@@ -13,7 +13,7 @@ namespace UnityAssetDependency
 		public static void ShowWindow(Dictionary<string, HashSet<string>> allResults)
 		{
 			var window = EditorWindow.GetWindow<AssetResultsWindow>();
-			window.titleContent = new GUIContent("Dependency");
+			window.titleContent = new GUIContent("Dependencies");
 			window.allResults = allResults;
 			window.Show();
 		}
@@ -135,7 +135,7 @@ namespace UnityAssetDependency
 			if (allGuids != null && database != null)
 				return;
 
-			EditorUtility.DisplayProgressBar("Building database", "Caching dependencies..", 0f);
+			EditorUtility.DisplayProgressBar("Building database", "Mapping dependencies..", 0f);
 
 			allGuids = AssetDatabase.FindAssets("t:object");
 
@@ -165,7 +165,7 @@ namespace UnityAssetDependency
 
 				progress += step;
 
-				EditorUtility.DisplayProgressBar("Building database", "Caching dependencies..", progress);
+				EditorUtility.DisplayProgressBar("Building database", "Mapping dependencies..", progress);
 			}
 
 			EditorUtility.ClearProgressBar();
