@@ -2,7 +2,7 @@
 	"name": "com.unityextensions.unityassetdependency",
 	"displayName": "UnityAssetDependency",
 	"description": "Finds where and if assets are being used.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"unity": "2018.3",
 	"license": "MIT",
 	"dependencies": {}
